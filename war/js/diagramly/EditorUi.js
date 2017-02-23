@@ -3077,7 +3077,7 @@
 			params.push('title=' + encodeURIComponent(file.getTitle()));
 		}
 		
-		return ((mxClient.IS_CHROMEAPP) ? 'https://www.draw.io/' : 'https://' + location.host + '/') +
+		return ((mxClient.IS_CHROMEAPP) ? 'https://www.draw.io/' : window.location.protocol + '//' + location.host + '/') +
 			((params.length > 0) ? '?' + params.join('&') : '') + data;
 	};
 	
